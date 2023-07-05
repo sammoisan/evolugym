@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+.bg-image {
+  position: absolute;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 25%
+    ),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0) 50%),
+    url("../public/images/009.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 65%;
+
+  filter: blur(2px) grayscale(1) brightness(0.45);
+
+  transform: scale(1.02);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gym-bg {
+  -webkit-mask-image: url("../public/images/grunge.png");
+  mask-image: url("../public/images/grunge.png");
+
+  -webkit-mask-size: cover;
+  mask-size: cover;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  mask-position: center;
+
+  transform: translateY(10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top {
+  position: absolute;
+  background: white;
+  height: 50%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bottom {
+  position: absolute;
+  background: black;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  z-index: -10;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-grunge {
+  transform: rotate(180deg) scale(1.2);
 }

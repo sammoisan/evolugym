@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply px-8 py-20 md:py-36 md:px-20 lg:py-40 lg:px-40;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+footer {
+  @apply px-8 pt-20 pb-6 md:pt-36 md:px-20 lg:pt-40 lg:px-40;
+}
+
+address {
+  @apply not-italic;
+}
+
+.section-title {
+  @apply text-5xl text-center pb-6 uppercase font-light md:text-7xl md:pb-8;
+}
+
+.footer-section-title {
+  @apply block text-xl font-bold text-title pb-2;
 }
